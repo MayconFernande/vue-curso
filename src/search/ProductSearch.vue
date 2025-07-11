@@ -1,23 +1,56 @@
 <template>
   <div>
     <div>
-      <input placeholder="Enter Search Term" @input="searchTerm = $event.target.value" />
+      <input
+        placeholder="Enter Search Term"
+        @input="searchTerm = $event.target.value"
+      >
     </div>
     <div class="filters">
-      <div><button @click="applyFilters({ type: 'heads' })">Filter for Heads</button></div>
-      <div><button @click="applyFilters({ type: 'arms' })">Filter for Arms</button></div>
-      <div><button @click="applyFilters({ type: 'torsos' })">Filter for Torsos</button></div>
-      <div><button @click="applyFilters({ type: 'bases' })">Filter for Bases</button></div>
-      <div><button @click="clearFilters()">Clear Filters</button></div>
+      <div>
+        <button @click="applyFilters({ type: 'heads' })">
+          Filter for Heads
+        </button>
+      </div>
+      <div>
+        <button @click="applyFilters({ type: 'arms' })">
+          Filter for Arms
+        </button>
+      </div>
+      <div>
+        <button @click="applyFilters({ type: 'torsos' })">
+          Filter for Torsos
+        </button>
+      </div>
+      <div>
+        <button @click="applyFilters({ type: 'bases' })">
+          Filter for Bases
+        </button>
+      </div>
+      <div>
+        <button @click="clearFilters()">
+          Clear Filters
+        </button>
+      </div>
       <div>Filters: {{ filters }}</div>
     </div>
   </div>
   <div>
     <ul>
-      <li v-for="(result, index) in pagedResults" :key="index">
-        <div><img :src="result.imageUrl" :alt="result.title" /></div>
+      <li
+        v-for="(result, index) in pagedResults"
+        :key="index"
+      >
         <div>
-          <div class="title">{{ result.title }}</div>
+          <img
+            :src="result.imageUrl"
+            :alt="result.title"
+          >
+        </div>
+        <div>
+          <div class="title">
+            {{ result.title }}
+          </div>
           <div>{{ result.description }}</div>
           <div>Type: {{ result.type.substring(0, result.type.length - 1) }}</div>
         </div>
@@ -25,9 +58,19 @@
     </ul>
   </div>
   <div>
-    <button @click="prevPage()" class="button-link">Previous Page</button>
+    <button
+      class="button-link"
+      @click="prevPage()"
+    >
+      Previous Page
+    </button>
     Showing {{ currentStartIndex }} to {{ currentEndIndex }} of {{ resultCount }} results
-    <button @click="nextPage()" class="button-link">Next Page</button>
+    <button
+      class="button-link"
+      @click="nextPage()"
+    >
+      Next Page
+    </button>
   </div>
 </template>
 

@@ -1,10 +1,15 @@
 <template>
   <div class="home">
     <div>
-      <img class="robot" src="@/assets/robot-home-copy.png" aria-hidden="true" alt="Robot" />
+      <img
+        class="robot"
+        src="@/assets/robot-home-copy.png"
+        aria-hidden="true"
+        alt="Robot"
+      >
     </div>
     <div class="get-started">
-      <a href="">Get started</a> building your first robot!
+      <router-link to="/build">Get started</router-link> building your first robot!
     </div>
   </div>
 </template>
@@ -14,9 +19,13 @@
 export default {
   name: 'HomePage',
   props: {
-    msg: String,
+    msg: {
+      type: String,
+      default: '',
+    },
   },
 };
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

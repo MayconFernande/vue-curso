@@ -3,29 +3,39 @@
     <nav>
       <ul>
         <li class="nav-item">
-          <img class="logo" src="./assets/build-a-bot-logo-copy.png" alt="logo" />
-          Build-a-Bot
+          <!-- router-link to={name: 'Home' }--/> -->
+          <router-link to="/" class="nav-link">
+            <img
+              class="logo"
+              src="./assets/build-a-bot-logo-copy.png"
+              alt="logo"
+            >
+            Build-a-Bot
+          </router-link>
+        </li>
+        <li class="nav-item">
+          <!-- router-link to={name: 'Build' }--/> -->
+          <router-link to="build" class="nav-link">
+            Build
+          </router-link>
+        </li>
+        <li class="nav-item">
+          <!-- router-link to={name: 'Search' }--/> -->
+          <router-link to="search" class="nav-link">
+            Search
+          </router-link>
         </li>
       </ul>
     </nav>
   </header>
   <main>
     <!-- <HomePage msg="Welcome to Your Vue.js App"/>-->
-     <ProductSearch />
+    <router-view />
   </main>
 </template>
 
 <script>
-// import HomePage from './home/HomePage.vue';
-// import RobotBuilder from './build/RobotBuilder.vue';
-import ProductSearch from './search/ProductSearch.vue';
 
-export default {
-  name: 'App',
-  components: {
-    ProductSearch,
-  },
-};
 </script>
 
 <style>
@@ -54,6 +64,10 @@ padding: 3px;
 display: flex;
 }
 
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+}
 .nav-item {
 display: inline-block;
 padding: 5px 10px;
@@ -65,5 +79,9 @@ border-right: 1px solid#bbb;
 .logo {
 vertical-align: middle;
 height: 30px;
+}
+
+.router-link-active{
+  color: white;
 }
 </style>
