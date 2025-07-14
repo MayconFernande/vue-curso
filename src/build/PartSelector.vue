@@ -3,18 +3,25 @@
     class="part"
     :class="position"
   >
-    <img
-      :src="selectedPart.imageUrl"
-      alt="part"
+    <router-link
+      :to="{
+        name: 'Parts',
+        params:{ partType: selectedPart.type, id: selectedPart.id }
+      }"
     >
+      <img
+        :src="selectedPart.imageUrl"
+        alt="part"
+      >
+    </router-link>
     <button
-      class="prev-selector"
-      @click="selectPreviousPart()"
-    />
+    @click="selectPreviousPart()"
+      class="prev-selector">
+    </button>
     <button
       class="next-selector"
-      @click="selectNextPart()"
-    />
+      @click="selectNextPart()">
+    </button>
     <span
       v-show="selectedPart.onSale"
       class="sale"

@@ -4,7 +4,11 @@
       <ul>
         <li class="nav-item">
           <!-- router-link to={name: 'Home' }--/> -->
-          <router-link to="/" class="nav-link">
+          <router-link
+            to="/"
+            class="nav-link"
+            active-class="home-active"
+          >
             <img
               class="logo"
               src="./assets/build-a-bot-logo-copy.png"
@@ -15,13 +19,19 @@
         </li>
         <li class="nav-item">
           <!-- router-link to={name: 'Build' }--/> -->
-          <router-link to="build" class="nav-link">
+          <router-link
+            to="build"
+            class="nav-link"
+          >
             Build
           </router-link>
         </li>
         <li class="nav-item">
           <!-- router-link to={name: 'Search' }--/> -->
-          <router-link to="search" class="nav-link">
+          <router-link
+            to="search"
+            class="nav-link"
+          >
             Search
           </router-link>
         </li>
@@ -81,7 +91,11 @@ vertical-align: middle;
 height: 30px;
 }
 
-.router-link-active{
+.active-link{
   color: white;
+}
+.home-active{
+  color: white;
+  text-shadow: 2px 2px blue;
 }
 </style>
