@@ -30,6 +30,7 @@ module.exports = {
 
     // Permite usar `v-html` quando necessário, com cautela
     'vue/no-v-html': 'off',
+    "no-param-reassign": "off",
 
     // Acessibilidade - relaxar algumas regras
     'vuejs-accessibility/click-events-have-key-events': 'warn',
