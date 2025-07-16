@@ -23,11 +23,11 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-###
-npm run build -- --mode=production cria um tipo de compilação que pode ser feito implementaçoes.
+### npm run build -- --mode=production
+cria um tipo de compilação que pode ser feito implementaçoes.
 
-###
-npm run build faz a compilação do projeto final
+### npm run build
+faz a compilação do projeto final
 
-###
-npm run build -- --mode=staging cria um novo tipo de compilação chamado de preparação.
+### npm run build -- --mode=staging
+cria um novo tipo de compilação chamado de preparação.
